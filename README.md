@@ -26,6 +26,7 @@ A Vue.js application for finding workout partners and gym buddies. This app allo
 1. Install dependencies:
 ```bash
 npm install
+npx playwright install
 ```
 
 2. Start the development server:
@@ -57,4 +58,42 @@ src/
 
 
 
+
+## Running Tests
+
+The tests use the following test credentials:
+- **Username**: `testuser`
+- **Password**: `password123`
+
+### Test Commands
+
+```bash
+# Run all tests
+npm test
+
+# Run tests with browser UI visible
+npm run test:headed
+
+# Run tests with Playwright UI
+npm run test:ui
+
+# Debug tests step by step
+npm run test:debug
+
+# View test report
+npm run test:report
+```
+
+### Running Specific Test Files
+
+```bash
+# Run only login tests
+npx playwright test tests/01-login.spec.js
+
+# Run only filtering tests
+npx playwright test tests/03-filtering.spec.js
+
+# Run tests matching a pattern
+npx playwright test --grep "login"
+```
 
