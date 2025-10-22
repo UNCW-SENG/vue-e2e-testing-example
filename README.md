@@ -2,13 +2,17 @@
 
 A Vue.js application for finding workout partners and gym buddies. This app allows users to browse profiles, view detailed information, and send friend requests.
 
-## Features
+## Quick Setup
 
-- **Login System**: Simple authentication with hardcoded credentials
-- **Profile Browser**: View a list of user profiles with basic information
-- **Detailed Profiles**: Click on any profile to see comprehensive details
-- **Friend Requests**: Send friend requests with success notifications
-- **Responsive Design**: Modern, mobile-friendly interface
+**Install Node.js**: 
+- **Windows (with admin)**: Download the LTS version from [nodejs.org](https://nodejs.org) → Run the installer → Restart terminal
+- **Windows (no admin)**: 
+  1. Download the LTS version from [nodejs.org](https://nodejs.org)
+  2. Extract to `C:\nodejs\` (or any folder you have write access to)
+  3. Add to PATH: `Win+R` → `sysdm.cpl` → Advanced → Environment Variables → User Variables → Path → New → Add `C:\nodejs\`
+  4. Restart terminal and verify with `node --version`
+- **macOS**: `brew install node` or download from [nodejs.org](https://nodejs.org)
+
 
 ## Getting Started
 
