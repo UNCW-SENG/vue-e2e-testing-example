@@ -9,9 +9,18 @@
       <h2 style="font-size: 24px; color: #333; margin-bottom: 16px;">Find Your Workout Partners</h2>
       <p style="color: #666; margin-bottom: 24px;">Connect with fellow fitness enthusiasts and find your perfect gym buddy!</p>
       
+      <div style="margin-bottom: 24px;">
+        <input 
+          v-model="filterKeyword"
+          type="text" 
+          placeholder="Filter by about or goals (e.g., 'yoga', 'strength', 'marathon')"
+          class="filter-input"
+        />
+      </div>
+      
       <div class="profile-grid">
         <div 
-          v-for="profile in profiles" 
+          v-for="profile in filteredProfiles" 
           :key="profile.id"
           class="profile-card"
           @click="viewProfile(profile.id)"
@@ -51,7 +60,28 @@ export default {
   name: 'ProfileList',
   data() {
     return {
-      profiles: getAllProfiles()
+      profiles: getAllProfiles(),
+      filterKeyword: ''
+    }
+  },
+  computed: {
+    filteredProfiles() {
+      if (!this.filterKeyword.trim()) {
+        return this.profiles
+      }
+      
+      const keyword = this.filterKeyword.toLowerCase()
+      return this.profiles.filter(profile => {
+        // Search in about section
+        const aboutMatch = profile.about && profile.about.toLowerCase().includes(keyword)
+        
+        // Search in goals array
+        const goalsMatch = profile.goals && profile.goals.some(goal => 
+          goal.toLowerCase().includes(keyword)
+        )
+        
+        return aboutMatch || goalsMatch
+      })
     }
   },
   methods: {
