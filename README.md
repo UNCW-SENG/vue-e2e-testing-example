@@ -5,8 +5,6 @@ A Vue.js application for finding workout partners and gym buddies. This app allo
 ## Quick Setup
 
 
-### Installation
-
 1. Install nodeJS if needed:
     - **Windows (with admin)**: Download the LTS version from [nodejs.org](https://nodejs.org) → Run the installer → Restart terminal
     - **Windows (no admin)**: 
