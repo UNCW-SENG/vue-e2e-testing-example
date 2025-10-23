@@ -4,37 +4,31 @@ A Vue.js application for finding workout partners and gym buddies. This app allo
 
 ## Quick Setup
 
-**Install Node.js**: 
-- **Windows (with admin)**: Download the LTS version from [nodejs.org](https://nodejs.org) → Run the installer → Restart terminal
-- **Windows (no admin)**: 
-  1. Download the LTS version from [nodejs.org](https://nodejs.org)
-  2. Extract to `C:\nodejs\` (or any folder you have write access to)
-  3. Add to PATH: `Win+R` → `sysdm.cpl` → Advanced → Environment Variables → User Variables → Path → New → Add `C:\nodejs\`
-  4. Restart terminal and verify with `node --version`
-- **macOS**: `brew install node` or download from [nodejs.org](https://nodejs.org)
-
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js (version 14 or higher)
-- npm or yarn
 
 ### Installation
 
-1. Install dependencies:
+1. Install nodeJS if needed:
+    - **Windows (with admin)**: Download the LTS version from [nodejs.org](https://nodejs.org) → Run the installer → Restart terminal
+    - **Windows (no admin)**: 
+        1. Download the LTS version from [nodejs.org](https://nodejs.org)
+        2. Extract to `C:\nodejs\` (or any folder you have write access to)
+        3. Add to PATH: `Win+R` → `sysdm.cpl` → Advanced → Environment Variables → User Variables → Path → New → Add `C:\nodejs\`
+        4. Restart terminal and verify with `node --version`
+    - **macOS**: `brew install node` or download from [nodejs.org](https://nodejs.org)
+
+
+2. Install dependencies:
 ```bash
 npm install
 npx playwright install
 ```
 
-2. Start the development server:
+3. Start the development server:
 ```bash
 npm run dev
 ```
 
-3. Open your browser and navigate to `http://localhost:3000`
+4. Open your browser and navigate to `http://localhost:3000`
 
 ### Test Credentials
 
@@ -60,10 +54,6 @@ src/
 
 
 ## Running Tests
-
-The tests use the following test credentials:
-- **Username**: `testuser`
-- **Password**: `password123`
 
 ### Test Commands
 
